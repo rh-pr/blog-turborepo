@@ -62,13 +62,22 @@ type Post {
   likes: [Like!]!
 }
 
+type AuthPayload {
+  id: Int!
+  name: String!
+  email: String!
+  avatar: String
+  bio: String
+  accessToken: String!
+}
+
 type Query {
   post: [Post!]!
 }
 
 type Mutation {
   createUser(createUserInput: CreateUserInput!): User!
-  sigIn(signInInput: SignInInput!): String!
+  sigIn(signInInput: SignInInput!): AuthPayload!
 }
 
 input CreateUserInput {
