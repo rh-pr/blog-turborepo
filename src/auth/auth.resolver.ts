@@ -1,0 +1,15 @@
+import { Args, Mutation, Resolver } from '@nestjs/graphql';
+import { AuthService } from './auth.service';
+import { SignInInput } from './dto/sigin.input';
+
+@Resolver()
+export class AuthResolver {
+  constructor(private readonly authService: AuthService) {}
+
+  @Mutation(() => String)
+  async sigIn(@Args('signInInput') signInInput: SignInInput){
+    const user = await this.authService.validateLocalUser(signInInput);
+
+    return user.name + 'Successfully signed in';
+  }
+}
