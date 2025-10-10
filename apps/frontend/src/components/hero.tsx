@@ -1,15 +1,17 @@
+import Image from "next/image";
+
 const Hero = () => {
   return (
     <div className="bg-gradient-to-br from-sky-500 to-indigo-500 text-white pt-12">
       <div className="container justify-center mx-auto flex flex-col md:flex-row items-center flex-wrap px-3">
-        {/* Left col */}
+      
         <div className="flex flex-col w-full justify-center items-start md:w-2/5 text-center md:text-left">
           <p className="capitalize tracking-wide w-full">
             Explore insights , tutorials, and stories for curious minds like
             yours
           </p>
           <h2 className="my-5 text-5xl font-bold leading-tight">
-            Welcome To Sakura Dev Blog
+            Welcome To The Hidden Spark Blog
           </h2>
 
           <p className="capitalize leading-normal text-xl">
@@ -20,12 +22,16 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* right col */}
+       
         <div className="w-full flex justify-center text-center py-7 md:w-3/5">
-          <img
+          <Image
+            // src="/hero.png"
             src="/hero.png"
             alt="hero section"
             className="w-full md:w-3/5  "
+            width={400}
+            height={600}
+            layout="intrinsic"
           />
         </div>
       </div>

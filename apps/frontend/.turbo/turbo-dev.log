@@ -1,0 +1,975 @@
+
+> frontend@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.4 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.178.32:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 2.4s
+ GET / 200 in 2845ms
+ ✓ Compiled in 44ms
+ ✓ Compiled / in 42ms
+ GET / 200 in 160ms
+ GET / 200 in 227ms
+ ✓ Compiled /favicon.ico in 162ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 479ms
+ ✓ Compiled in 56ms
+ ✓ Compiled in 55ms
+ ✓ Compiled in 123ms
+ ✓ Compiled / in 74ms
+ GET / 200 in 360ms
+ GET / 200 in 347ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ ✓ Compiled / in 39ms
+ GET / 200 in 153ms
+ ✓ Compiled / in 38ms
+ GET / 200 in 153ms
+ ✓ Compiled in 75ms
+ ✓ Compiled / in 41ms
+ GET / 200 in 168ms
+ ⨯ [Error: Image with src "/image.png" is missing required "width" property.] {
+  digest: '4231073239'
+}
+ GET / 500 in 314ms
+ GET /favicon.ico 200 in 283ms
+ ✓ Compiled in 48ms
+ ✓ Compiled / in 41ms
+ ⨯ [Error: Image with src "public/image.png" is missing required "width" property.] {
+  digest: '559052694'
+}
+ GET / 500 in 284ms
+ GET /favicon.ico 200 in 272ms
+ ⨯ [Error: Image with src "public/image.png" is missing required "width" property.] {
+  digest: '559052694'
+}
+ GET / 500 in 112ms
+ GET /favicon.ico 200 in 266ms
+ ⨯ [Error: Image with src "public/image.png" is missing required "width" property.] {
+  digest: '559052694'
+}
+ GET / 500 in 142ms
+ GET /favicon.ico 200 in 275ms
+ ✓ Compiled in 47ms
+ ✓ Compiled / in 50ms
+ ⨯ [Error: Image with src "/image.png" is missing required "width" property.] {
+  digest: '4231073239'
+}
+ GET / 500 in 383ms
+ GET /favicon.ico 200 in 265ms
+ ✓ Compiled in 49ms
+ ✓ Compiled / in 43ms
+Image with src "/image.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 288ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 274ms
+ ✓ Compiled in 55ms
+ ✓ Compiled / in 68ms
+ GET / 200 in 328ms
+ GET / 200 in 310ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 272ms
+ ✓ Compiled / in 38ms
+ GET / 200 in 149ms
+ ✓ Compiled / in 52ms
+ GET / 200 in 159ms
+ ✓ Compiled in 43ms
+ ✓ Compiled / in 40ms
+ GET / 200 in 174ms
+ ✓ Compiled in 209ms
+ ⨯ ./apps/frontend/src/components/desktopNavbar.tsx:4:29
+Ecmascript file had an error
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mPropsWithChildren[39m[33m,[39m useEffect[33m,[39m useState } [36mfrom[39m [32m"react"[39m
+ [90m   |[39m                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/desktopNavbar.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+
+
+./apps/frontend/src/components/desktopNavbar.tsx:4:40
+Ecmascript file had an error
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { cn } [36mfrom[39m [32m"@/lib/utils"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mPropsWithChildren[39m[33m,[39m useEffect[33m,[39m useState } [36mfrom[39m [32m"react"[39m
+ [90m   |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/desktopNavbar.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1474ms
+ GET / 500 in 1806ms
+ GET /favicon.ico 500 in 137ms
+ ✓ Compiled / in 54ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 365ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
+ ✓ Compiled in 56ms
+ ✓ Compiled in 42ms
+ ✓ Compiled in 50ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 333ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 283ms
+ ✓ Compiled in 44ms
+ ✓ Compiled / in 44ms
+ GET / 200 in 166ms
+ ✓ Compiled / in 40ms
+ GET / 200 in 145ms
+ ✓ Compiled / in 39ms
+ GET / 200 in 152ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 43ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 347ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
+ ✓ Compiled in 52ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 44ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 402ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 286ms
+ ✓ Compiled in 54ms
+ ✓ Compiled / in 53ms
+ GET / 200 in 175ms
+ ✓ Compiled / in 42ms
+ GET / 200 in 162ms
+ ✓ Compiled in 48ms
+ ✓ Compiled in 52ms
+ ✓ Compiled in 45ms
+ ✓ Compiled in 64ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 333ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ ✓ Compiled in 54ms
+ ✓ Compiled in 53ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 44ms
+ ✓ Compiled in 45ms
+ ✓ Compiled / in 43ms
+ GET / 200 in 157ms
+ ✓ Compiled in 45ms
+ ✓ Compiled / in 43ms
+ GET / 200 in 169ms
+ ✓ Compiled / in 38ms
+ GET / 200 in 148ms
+ ✓ Compiled in 69ms
+ ✓ Compiled / in 53ms
+ GET / 200 in 186ms
+ ✓ Compiled / in 40ms
+ GET / 200 in 149ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 217ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 289ms
+ ✓ Compiled in 50ms
+ ✓ Compiled / in 50ms
+ GET / 200 in 176ms
+ ⨯ ./apps/frontend/src/components/ui/SideBar.tsx:28:5
+Parsing ecmascript source code failed
+[0m [90m 26 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m         [33m<[39m[33m/[39m[33m>>[39m
+[31m[1m>[22m[39m[90m 28 |[39m     )[33m;[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 29 |[39m }
+ [90m 30 |[39m
+ [90m 31 |[39m [36mexport[39m [36mdefault[39m [33mSideBar[39m[33m;[39m[0m
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/ui/SideBar.tsx
+    ./apps/frontend/src/components/mobileNavbar.tsx
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+
+ GET / 500 in 254ms
+ GET /favicon.ico 500 in 78ms
+ ✓ Compiled / in 44ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 403ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 318ms
+ GET / 200 in 141ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 306ms
+ ✓ Compiled in 49ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 367ms
+ ✓ Compiled in 51ms
+ ✓ Compiled in 50ms
+ ✓ Compiled in 67ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 330ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 264ms
+ ✓ Compiled in 54ms
+ ✓ Compiled in 49ms
+ ✓ Compiled in 51ms
+ ✓ Compiled in 51ms
+ ✓ Compiled / in 38ms
+ GET / 200 in 154ms
+ GET / 200 in 78ms
+ ✓ Compiled /_not-found/page in 418ms
+ GET /about 404 in 504ms
+ GET /about 404 in 252ms
+ GET /about 404 in 103ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 286ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 119ms
+ GET / 200 in 83ms
+ GET / 200 in 77ms
+ ✓ Compiled in 58ms
+ GET /about 404 in 166ms
+ GET /about 404 in 264ms
+ GET / 200 in 110ms
+ GET / 200 in 111ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 311ms
+ GET / 200 in 112ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 294ms
+ GET / 200 in 118ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 280ms
+ GET / 200 in 102ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 301ms
+ GET / 200 in 126ms
+ ✓ Compiled in 60ms
+ ✓ Compiled in 53ms
+ GET / 200 in 170ms
+ ✓ Compiled in 50ms
+ ✓ Compiled in 53ms
+ GET / 200 in 176ms
+ ✓ Compiled in 48ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 330ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 307ms
+ GET / 200 in 63ms
+ ✓ Compiled in 48ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+ GET / 200 in 328ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
+ GET / 200 in 67ms
+ ✓ Compiled in 52ms
+ ✓ Compiled in 57ms
+ ✓ Compiled in 63ms
+ ✓ Compiled / in 55ms
+ GET / 200 in 169ms
+ GET / 200 in 74ms
+ ✓ Compiled in 52ms
+ ✓ Compiled / in 47ms
+ GET / 200 in 163ms
+ GET / 200 in 69ms
+ ✓ Compiled in 53ms
+ ✓ Compiled / in 47ms
+ GET / 200 in 173ms
+ GET / 200 in 129ms
+ ✓ Compiled in 50ms
+ ✓ Compiled / in 40ms
+ GET / 200 in 158ms
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:3:1
+Module not found: Can't resolve './mobileNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m
+ [90m 6 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:3:1
+Module not found: Can't resolve './mobileNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m
+ [90m 6 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:2:1
+Module not found: Can't resolve './desktopNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:3:1
+Module not found: Can't resolve './mobileNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m
+ [90m 6 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/components/NavbarContainer.tsx:3:1
+Module not found: Can't resolve './mobileNavbar'
+[0m [90m 1 |[39m [36mimport[39m {[33mPropsWithChildren[39m} [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mDesktopNavbar[39m [36mfrom[39m [32m'./desktopNavbar'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mMobileNavbar[39m [36mfrom[39m [32m'./mobileNavbar'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mProps[39m [33m=[39m [33mPropsWithChildren[39m[33m;[39m
+ [90m 6 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/components/NavbarContainer.tsx
+    ./apps/frontend/src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:3:1
+Module not found: Can't resolve '@/components/NavbarContainer'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRootLayout[39m({[0m
+
+Import map: aliased to relative './src/components/NavbarContainer' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./apps/frontend/src/app/layout.tsx:2:1
+Module not found: Can't resolve '@/components/navbar'
+[0m [90m 1 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mNavbar[39m [36mfrom[39m [32m"@/components/navbar"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m [33mNavbarContainer[39m [36mfrom[39m [32m"@/components/NavbarContainer"[39m[33m;[39m
+ [90m 4 |[39m
+ [90m 5 |[39m[0m
+
+Import map: aliased to relative './src/components/navbar' inside of [project]/apps/frontend
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ✓ Compiled in 653ms
+ ✓ Compiled / in 55ms
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
