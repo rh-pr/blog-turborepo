@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const GET_POSTS = gql`
-    query {
-        post {
+    query  post($skip: Float, $take: Float) {
+        post(skip: $skip, take: $take) {
             id
             title
             content
@@ -10,4 +10,6 @@ export const GET_POSTS = gql`
             createdAt
             slug
         }
+
+        postCount
     }`

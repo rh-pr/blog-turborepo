@@ -1,18 +1,21 @@
 import Hero from '@/components/hero';
 import Post from '@/components/post';
+import { DEFAULT_PAGE_SIZE } from '@/constants';
 import { fetchPosts } from '@/lib/actions/postAction';
 
 type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined };
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default async function Home(props: Props) {
-  const posts = await fetchPosts();
+export default async function Home({searchParams}: Props) {
+  const { page } = (await searchParams) ?? {};
+  const {posts, totalPosts} = await fetchPosts({page: page ? +page : 1, pageSize: 12});
 
   return (
     <main className="">
       <Hero />
-      <Post posts={posts} />
+      <Post posts={posts} currentPage={page ? +page : 1} totalPage={Math.ceil(totalPosts / DEFAULT_PAGE_SIZE)} />
     </main>
   );
 }
+ 
