@@ -49,11 +49,11 @@ async function main() {
       userIds.push(user.id);
     });
 
-    const posts = Array.from({ length: 40 }).map(() => ({
+    const posts = Array.from({ length: 400 }).map(() => ({
       title: faker.lorem.sentence(),
       slug: generateSlug(faker.lorem.sentence()),
       content: faker.lorem.paragraphs(3),
-      thumbnail: faker.image.urlLoremFlickr(),
+      thumbnail: `https://picsum.photos/seed/${faker.string.uuid()}/800/600`,
       authorId: faker.helpers.arrayElement(userIds),
       published: true,
     }));
