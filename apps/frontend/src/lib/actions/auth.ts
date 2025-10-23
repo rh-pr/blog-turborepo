@@ -8,6 +8,7 @@ import { SignUpFormSchema } from "../zodSchemas/signUpFormSchema";
 import { redirect } from "next/navigation";
 import { LoginFormSchema } from "../zodSchemas/signInFormSchema";
 import { revalidatePath } from "next/cache";
+import { createSession } from "../session";
 
 export async function signup (state: SignUpFormState, formData: FormData): Promise<SignUpFormState> {
     const validatedField = SignUpFormSchema.safeParse(Object.fromEntries(formData.entries()));
@@ -60,6 +61,15 @@ export async function signin(state: SignUpFormState, formData: FormData): Promis
         }
    }
 
+
+   await createSession({
+    user: {
+        id: data.sigIn.id,
+        name: data.sigIn.name,
+        avatar: data.sigIn.avatar
+    },
+    accessToken: data.sigIn.accessToken
+   });
 
     revalidatePath("/")
     redirect("/");
