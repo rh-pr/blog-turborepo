@@ -5,7 +5,7 @@ export type SignUpFormState = {
         password?: string[],
     },
     message?: string,
-    data?: {
+    data: {
         name?: string,
         email?: string,
         password?: string;

@@ -1,11 +1,13 @@
 "use server";
 
 import { fetchGraphQL } from "../fetchGraphQL";
-import { CREATE_USER_MUTATION } from "../gqlQueries";
+import { CREATE_USER_MUTATION, SIGN_IN_MUTATION } from "../gqlQueries";
 import { print } from "graphql";
 import { SignUpFormState } from "../types/formState";
 import { SignUpFormSchema } from "../zodSchemas/signUpFormSchema";
 import { redirect } from "next/navigation";
+import { LoginFormSchema } from "../zodSchemas/signInFormSchema";
+import { revalidatePath } from "next/cache";
 
 export async function signup (state: SignUpFormState, formData: FormData): Promise<SignUpFormState> {
     const validatedField = SignUpFormSchema.safeParse(Object.fromEntries(formData.entries()));
@@ -32,4 +34,34 @@ export async function signup (state: SignUpFormState, formData: FormData): Promi
    }
 
     redirect("/auth/signin");
+}
+
+export async function signin(state: SignUpFormState, formData: FormData): Promise<SignUpFormState> {
+   const validatedField = LoginFormSchema.safeParse(Object.fromEntries(formData.entries()));
+   
+    if (!validatedField.success) {
+        return {
+            data: Object.fromEntries(formData.entries()),
+            errors: validatedField.error.flatten().fieldErrors,
+        }
+    }
+
+    const data = await fetchGraphQL(print(SIGN_IN_MUTATION), {
+        input: {
+            ...validatedField.data,
+        }
+    });
+
+
+   if (data.errors) {
+        return {
+            data: Object.fromEntries(formData.entries()),
+            message: "Something want wrong"
+        }
+   }
+
+
+    revalidatePath("/")
+    redirect("/");
+
 }
