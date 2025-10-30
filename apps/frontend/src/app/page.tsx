@@ -12,8 +12,7 @@ export default async function Home({searchParams}: Props) {
   const { page } = (await searchParams) ?? {};
   const {posts, totalPosts} = await fetchPosts({page: page ? +page : 1, pageSize: 12});
 
-  const session = await getSession();
-  console.log(session);
+  const session = await getSession()
 
   return (
     <main className="">

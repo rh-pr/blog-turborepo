@@ -14,7 +14,7 @@ const Profile = ({user}: Props) => {
         <Popover>
             <PopoverTrigger>
                 <Avatar>
-                    <AvatarImage src={user.avatar} />
+                    <AvatarImage src={user.avatar} className="rounded-full w-14 border-white border-2"/>
                     <AvatarFallback>
                         <UserIcon className="w-8 text-slate-500" />
                     </AvatarFallback>
@@ -36,6 +36,7 @@ const Profile = ({user}: Props) => {
                     </Link>
                        <a href="/api/auth/signout">
                         <ArrowRightStartOnRectangleIcon className="w-4"/>
+                         <span>Sign Out</span>
                     </a>
                 </div>
             </PopoverContent>
