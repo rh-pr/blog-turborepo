@@ -48,3 +48,18 @@ GraphQL errora:  [
  ✓ Compiled / in 317ms
 {
   user: { id: 12, name: 'Ruslana Hural', avatar: null },
+  accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEyLCJpYXQiOjE3NjEyNDg2MjgsImV4cCI6MTc2MTMzNTAyOH0.78j5ImtZPQlLIaozCGD7qfI9yLGGnu9hOPZoeTO-MkY',
+  iat: 1761248628,
+  exp: 1761853428
+}
+ GET / 200 in 497ms
+ POST /auth/signin 303 in 646ms
+ ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+^Cnpm error Lifecycle script `dev` failed with error:
+npm error code 3221225786
+npm error path D:\pets\blog-turborepo\apps\frontend
+npm error workspace frontend@0.1.0
+npm error location D:\pets\blog-turborepo\apps\frontend
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c next dev --turbopack
+Terminate batch job (Y/N)? 

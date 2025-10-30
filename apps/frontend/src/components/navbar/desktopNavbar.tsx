@@ -27,10 +27,10 @@ const DesktopNavbar = (props: Props) => {
     const isHome = pathName == '/'
 
     return (
-        <nav className={cn("hidden md:block fixed transition-color w-full z-50 text-white top-0", {
+        <nav className={cn("hidden md:block fixed transition-color w-full z-50 text-white top-0 ", {
             "bg-white text-gray-700 shadow-md transition-all": isScrolled || !isHome,
         })} >
-            <div className="flex items-center px-4 py-4 container">
+            <div className="flex items-center  px-4 py-4 ">
                 {props.children}
             </div>
             <hr className="border-1 border-gray-100 opacity-25" />
