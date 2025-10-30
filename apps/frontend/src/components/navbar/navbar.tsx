@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SignInPanel from "../signInPanel";
 import { getSession } from "@/lib/session";
+import Profile from "../Profile";
 
 
 const  Navbar = async () => {
@@ -13,12 +14,7 @@ const  Navbar = async () => {
         <Link href={"/"}>Home</Link>
         <Link href={"/about"}>About</Link>
         <Link href={"/contact"}>Contact</Link>
-        {session && session.user ? <>
-            {/* todo: add profile */}
-            
-            <a href="/api/auth/signout">Sign Out</a>
-          </> : 
-          <SignInPanel />}
+        {session && session.user ? <Profile user={session.user} /> : <SignInPanel />}
       </div>
     </>
   )
