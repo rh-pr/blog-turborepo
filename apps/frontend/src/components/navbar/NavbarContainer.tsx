@@ -8,7 +8,7 @@ type Props = PropsWithChildren;
 const  NavbarContainer = (props: Props) => {
 
     return (
-      <div className='relative'>
+      <div className='relative z-30 '>
         <DesktopNavbar>{props.children}</DesktopNavbar>
         <MobileNavbar>{props.children}</MobileNavbar>
       </div>

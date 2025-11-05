@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import NavbarContainer from "@/components/navbar/NavbarContainer";
+import Providers from "./providers";
 
 
 export default function RootLayout({
@@ -11,10 +12,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavbarContainer>
-          <Navbar />
-        </NavbarContainer>
-        {children}
+        <Providers>
+            <NavbarContainer>
+              <Navbar />
+            </NavbarContainer>
+            {children}
+        </Providers>
+        
       </body>
     </html>
   );
