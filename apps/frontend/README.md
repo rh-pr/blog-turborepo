@@ -41,7 +41,6 @@ Note: This README assumes `pnpm` is used (common with Turborepo). If you use `np
 - `package.json` — root scripts and workspace settings
 - `turbo.json` — turborepo configuration
 
-(There are additional project files for testing, prisma migrations, etc.)
 
 ## Prerequisites
 - Node.js 18+ (or version used by project)
