@@ -23,7 +23,6 @@ const CommentPagination = ({
         if ( typeof page === 'number' && page > 0 && page <= totalPages ) setCurrentPage(page);
     }
 
-    console.log(pageNumbers)
     return (
         <div className={cn(className, "flex gap-2 justify-center items-center")}>
             {currentPage !== 1 && (

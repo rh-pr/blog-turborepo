@@ -1,5 +1,5 @@
 import { authFetchGraphQL, fetchGraphQL } from "../fetchGraphQL";
-import { CREATE_COMMENT_MUTATION, GET_POST_COMMENTS } from "../gqlQueries";
+import { CREATE_COMMENT_MUTATION, GET_POST_COMMENTS, POST_LIKES } from "../gqlQueries";
 import { print } from "graphql";
 import { CreateCommentFormState } from "../types/formState";
 import { CommentFormSchema } from "../zodSchemas/commentFormSchema";
@@ -45,3 +45,4 @@ export async function saveComment(state: CreateCommentFormState, formData: FormD
         data: Object.fromEntries(formData.entries()),
     }
 }
+

@@ -3,6 +3,7 @@ import Image from "next/image"
 import SantizedContent from "./_components/SantizedContent";
 import Comments from "./_components/comments";
 import { getSession } from "@/lib/session";
+import Like from "./_components/like";
 
 type Props = {
     params: {
@@ -27,6 +28,7 @@ export default async function PostPage ({ params }:Props) {
                    className="rounded-md object-cover"/>
         </div>
         <SantizedContent content={post.content}   className="mt-4 "/>
+        <Like postId={post.id} />
         <Comments postId={post.id} user={session?.user}/>
     </main>
 }

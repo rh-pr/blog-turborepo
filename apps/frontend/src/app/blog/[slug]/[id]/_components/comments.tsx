@@ -29,9 +29,7 @@ const Comments = ({ postId, user }: Props) => {
     });
 
     const totalPages = Math.ceil((data?.count ?? 0) / DEFAULT_PAGE_SIZE);
-    console.log('hi', user);
     
-
     return (
         <div className="p-2 rounded-md shadow-md mt-8">
            <h6 className="text-lg text-slate-700 mb-4"> Comments </h6>
