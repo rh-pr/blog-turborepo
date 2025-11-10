@@ -75,12 +75,18 @@ export const CREATE_COMMENT_MUTATION = gql`
     }
 `
 
-export const POST_LIKE_DATA = gql`
+export const POST_LIKES_COUNT = gql`
     query postLikeData($postId: Int!) {
         postLikesCount(postId: $postId)
+    }
+`
+
+export const USER_LIKED_POST = gql`
+    query postLikeData($postId: Int!) {
         userLikedPost(postId: $postId)
     }
 `
+
 export const LIKE_POST = gql`
     mutation likePost($postId: Int!) {
         likePost(postId: $postId)

@@ -1,19 +1,19 @@
 "use server";
-import { authFetchGraphQL } from "../fetchGraphQL";
-import { LIKE_POST, POST_LIKE_DATA, UNLIKE_POST } from "../gqlQueries";
+import { authFetchGraphQL, fetchGraphQL } from "../fetchGraphQL";
+import { LIKE_POST, POST_LIKES_COUNT, UNLIKE_POST, USER_LIKED_POST } from "../gqlQueries";
 import { print } from "graphql";
 
-export async function getPostLikeData(postId: number) {
-    const data = await authFetchGraphQL(print(POST_LIKE_DATA), {
-        postId,
-    });
-    
-    return {
-        likeCount: data.postLikesCount as number,
-        userLikedPost: data.userLikedPost as boolean,
-    }
+
+export async function getUseLikedStatus(postId: number) {
+    const userLiked = await authFetchGraphQL(print(USER_LIKED_POST),{ postId })
+    return userLiked.userLikedPost;
 }
 
+export async function getLikesCount(postId: number) {
+    const likesCount = await fetchGraphQL(print(POST_LIKES_COUNT), { postId });
+    return likesCount.postLikesCount as number
+}
+      
 export async function likePost (postId: number) {
     const data = await authFetchGraphQL(print(LIKE_POST), {
         postId,
