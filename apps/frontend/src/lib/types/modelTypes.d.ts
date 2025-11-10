@@ -10,6 +10,10 @@ export type Post = {
   authorId: number;
   author: User;
   tags: Tag[];
+  _count?: {
+    likes: number,
+    comments: number,
+  }
 }
 
 export type User = {

@@ -12,6 +12,7 @@ type Props = {
 
 const Pagination = ({ totalPages, currentPage, pageNeighbors = 2, className}: Props) => {
   const pageNumbers = calculatePageNumbers({pageNeighbors, currentPage, totalPages});
+  
 
   return (
     <div className="flex item-center justify-center gap-2 mt-4 w-full">

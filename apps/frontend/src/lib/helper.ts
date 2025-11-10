@@ -20,6 +20,7 @@ export function calculatePageNumbers({pageNeighbors, currentPage, totalPages}:{p
         if (startPage > 1) pages = ['...', ...pages];
         if (endPage < totalPages - 1) pages = [...pages, '...'];
         
+         console.log('number of the pages', endPage);
         return pages;
     };
 
