@@ -1,5 +1,4 @@
 import {  Tooltip,  TooltipContent,  TooltipProvider, TooltipTrigger,   } from "@/components/ui/tooltip";
-// import { Tooltip, TooltipProvider, TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
 import { Link, PencilIcon } from "lucide-react";
 
 type Props = {
