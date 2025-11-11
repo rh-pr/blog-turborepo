@@ -11,7 +11,7 @@ const PostListItem = ({post}: Props) => {
   return (
     <div className="grid grid-cols-8 m-3 rounded-md overflow-hidden border shadow hover:scale-[101%] bg-white">
         <div className="relative w-48 h-32 m-3">
-            <Image src={post.thumbnail ?? "/default-image.jpg"} alt={post.title} fill />
+            <Image src={post.thumbnail || "/default-image.jpg"} alt={post.title} fill />
         </div>
         <div className="ml-10 flex flex-col gap-2 col-span-2">
             <p className="text-lg line-clamp-1 px-2 text-slate-700 text-center"> { post.title }</p>
