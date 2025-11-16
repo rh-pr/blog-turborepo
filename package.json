@@ -17,5 +17,8 @@
   "description": "",
   "devDependencies": {
     "turbo": "^2.5.8"
+  },
+  "dependencies": {
+    "api": "^6.1.3"
   }
 }
