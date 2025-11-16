@@ -25,12 +25,15 @@ const UserPostForm = ( {state, formAction}: Props) => {
             description: state?.messaage,
         });
         }
+        setImageUrl('');
+        
     }, [state])
   return (
     <form action={formAction} className="flex flex-col gap-5 [&>div>label]:text-slate-500 [&>div>input]:transition [&>div>textarea]:transition ">
+       <input hidden name="id" defaultValue={state?.data?.id} />
         <div>
             <Label htmlFor="title">Title</Label>
-            <Input name="title" placeholder="Enter Title Of Your Post" />
+            <Input name="title" placeholder="Enter Title Of Your Post" defaultValue={state?.data?.title}/>
         </div>
         {state?.errors?.title && (
             <p className="text-red-500">{state.errors.title}</p>
@@ -40,7 +43,8 @@ const UserPostForm = ( {state, formAction}: Props) => {
             <Textarea
                 name="content"
                 placeholder="Write Your Post Content Here"
-                rows={6} />
+                rows={6} 
+                defaultValue={state?.data?.content}/>
         </div>
          {state?.errors?.content && (
             <p className="text-red-500">{state.errors.content}</p>
@@ -56,9 +60,9 @@ const UserPostForm = ( {state, formAction}: Props) => {
                         setImageUrl(URL.createObjectURL(e.target.files[0]));
                 }}/>
 
-                {!!imageUrl && (
+                {(!!imageUrl || !!state?.data?.previousThumbnailUrl) && (
                     <Image
-                        src={imageUrl}
+                        src={(imageUrl || state?.data?.previousThumbnailUrl) || "/default-image.jpg"}
                         alt="post thumbnail"
                         width={200}
                         height={200} />
@@ -69,13 +73,13 @@ const UserPostForm = ( {state, formAction}: Props) => {
         )}
         <div>
             <Label htmlFor="tags" >Tags</Label>
-            <Input name="tags" placeholder="Enter tags (comma-separated" />
+            <Input name="tags" placeholder="Enter tags (comma-separated"  defaultValue={state?.data?.tags}/>
         </div>
          {state?.errors?.tags && (
             <p className="text-red-500">{state.errors.tags}</p>
         )}
         <div className="flex gap-2">
-            <Checkbox name="published" />
+            <Checkbox name="published" defaultChecked={state?.data?.published === "on"}/>
             <Label htmlFor="published">Published Now</Label>
         </div>
          {state?.errors?.published && (

@@ -1,0 +1,16 @@
+import { createClient } from '@supabase/supabase-js'
+
+export async function uploadThumbnail(image: File) {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_API_KEY || '';
+
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    
+    const data = await supabase.storage.from('thumbnails').upload(`${image.name}_${Date.now()}`, image);
+
+    if (!data?.data?.path) throw new Error('Failed to upload the fail');
+    
+    const urlData = await supabase.storage.from('thumbnails').getPublicUrl(data.data?.path);
+
+    return urlData.data.publicUrl;
+}
