@@ -1,5 +1,6 @@
 import {  Tooltip,  TooltipContent,  TooltipProvider, TooltipTrigger,   } from "@/components/ui/tooltip";
-import { Link, PencilIcon } from "lucide-react";
+import {PencilIcon } from "lucide-react";
+import Link from "next/link";
 
 type Props = {
     postId: number
@@ -25,10 +26,10 @@ const PostActions = ({postId}: Props) => {
         <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <a href={`/user/posts/${postId}/delete`} 
+            <Link href={`/user/posts/${postId}/delete`}
                   className="border p-2 border-red-500 rounded-md text-red-500 hover:border-red-700 hover:text-red-700 transition-colors hover:cursor-pointer">
                     <PencilIcon className="w-4" />
-            </a>
+            </Link>
           </TooltipTrigger> 
           <TooltipContent className="text-red-500 border border-red-500 bg-white">
             <p>Delete this post</p>

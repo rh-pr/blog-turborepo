@@ -7,10 +7,10 @@ type Props = PropsWithChildren<{
 
 export default function PostsLayout({children, modal}: Props) {
   return (
-    <div>
+    <>
         {children}
         {modal}
-    </div>
+    </>
   );
 }
 
