@@ -8,58 +8,95 @@
    - Environments: .env
 
  ✓ Starting...
- ✓ Ready in 1380ms
- ○ Compiling /auth/signin ...
- ✓ Compiled /auth/signin in 2.8s
- GET /auth/signin 200 in 3342ms
- ✓ Compiled /favicon.ico in 147ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 458ms
+ ✓ Compiled middleware in 129ms
+ ✓ Ready in 1371ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3s
+ ⨯ ./apps/frontend/src/lib/upload.ts:1:1
+Module not found: Can't resolve '@supabase/supabase-js'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m { createClient } [36mfrom[39m [32m'@supabase/supabase-js'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m [36masync[39m [36mfunction[39m uploadThumbnail(image[33m:[39m [33mFile[39m) {
+ [90m 4 |[39m     [36mconst[39m supabaseUrl [33m=[39m process[33m.[39menv[33m.[39m[33mNEXT_PUBLIC_SUPABASE_URL[39m [33m||[39m [32m''[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./apps/frontend/src/lib/upload.ts
+    ./apps/frontend/src/lib/actions/postAction.ts
+    ./apps/frontend/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1145ms
+ GET / 500 in 4375ms
+ ✓ Compiled /favicon.ico in 173ms
+ GET /favicon.ico 500 in 204ms
+ ✓ Compiled in 147ms
+ ✓ Compiled / in 179ms
 GraphQL errora:  [
   {
-    message: 'Invalid password',
+    message: 'Cannot query field "post" on type "Query". Did you mean "posts"?',
     locations: [ [Object] ],
-    path: [ 'sigIn' ],
-    extensions: {
-      code: 'UNAUTHENTICATED',
-      stacktrace: [Array],
-      originalError: [Object]
-    }
+    extensions: { code: 'GRAPHQL_VALIDATION_FAILED', stacktrace: [Array] }
   }
 ]
  ⨯ Error: Failed to fetch GraphQL data
-    at fetchGraphQL (src\lib\fetchGraphQL.ts:16:15)
-    at async signin (src\lib\actions\auth.ts:50:18)
-  14 |     if (result.errors) {
-  15 |         console.log('GraphQL errora: ', result.errors);
-> 16 |         throw new Error('Failed to fetch GraphQL data');
+    at fetchGraphQL (src\lib\fetchGraphQL.ts:17:15)
+    at async fetchPosts (src\lib\actions\postAction.ts:13:18)
+    at async Home (src\app\page.tsx:13:31)
+  15 |     if (result.errors) {
+  16 |         console.log('GraphQL errora: ', result.errors);
+> 17 |         throw new Error('Failed to fetch GraphQL data');
      |               ^
-  17 |     }
-  18 |
-  19 |     return result.data; {
-  digest: '537514331'
+  18 |     }
+  19 |
+  20 |     return result.data; {
+  digest: '3472289068'
 }
- POST /auth/signin 500 in 488ms
- ✓ Compiled in 73ms
- ✓ Compiled /auth/signin in 49ms
- GET /auth/signin 200 in 415ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 281ms
- GET /auth/signin 200 in 122ms
- GET /favicon.ico?favicon.0b3bf435.ico 200 in 268ms
- ✓ Compiled / in 317ms
-{
-  user: { id: 12, name: 'Ruslana Hural', avatar: null },
-  accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEyLCJpYXQiOjE3NjEyNDg2MjgsImV4cCI6MTc2MTMzNTAyOH0.78j5ImtZPQlLIaozCGD7qfI9yLGGnu9hOPZoeTO-MkY',
-  iat: 1761248628,
-  exp: 1761853428
+ GET / 500 in 1135ms
+ GET /favicon.ico 200 in 354ms
+GraphQL errora:  [
+  {
+    message: 'Cannot query field "post" on type "Query". Did you mean "posts"?',
+    locations: [ [Object] ],
+    extensions: { code: 'GRAPHQL_VALIDATION_FAILED', stacktrace: [Array] }
+  }
+]
+ ⨯ Error: Failed to fetch GraphQL data
+    at fetchGraphQL (src\lib\fetchGraphQL.ts:17:15)
+    at async fetchPosts (src\lib\actions\postAction.ts:13:18)
+    at async Home (src\app\page.tsx:13:31)
+  15 |     if (result.errors) {
+  16 |         console.log('GraphQL errora: ', result.errors);
+> 17 |         throw new Error('Failed to fetch GraphQL data');
+     |               ^
+  18 |     }
+  19 |
+  20 |     return result.data; {
+  digest: '3472289068'
 }
- GET / 200 in 497ms
- POST /auth/signin 303 in 646ms
+ GET / 500 in 202ms
+ GET /favicon.ico 200 in 287ms
+ ✓ Compiled in 106ms
+ ✓ Compiled / in 48ms
+number of the pages 3
+Image with src "/hero.png" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
  ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
-^Cnpm error Lifecycle script `dev` failed with error:
-npm error code 3221225786
-npm error path D:\pets\blog-turborepo\apps\frontend
-npm error workspace frontend@0.1.0
-npm error location D:\pets\blog-turborepo\apps\frontend
-npm error command failed
-npm error command C:\WINDOWS\system32\cmd.exe /d /s /c next dev --turbopack
-Terminate batch job (Y/N)? 
+ GET / 200 in 517ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
+number of the pages 3
+ GET / 200 in 199ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 284ms
+ ✓ Compiled /api/auth/signout in 148ms
+ GET /api/auth/signout 307 in 433ms
+number of the pages 3
+ GET / 200 in 182ms
+ ✓ Compiled /auth/signup in 428ms
+ GET /auth/signup 200 in 519ms
+ ✓ Compiled /auth/signin in 322ms

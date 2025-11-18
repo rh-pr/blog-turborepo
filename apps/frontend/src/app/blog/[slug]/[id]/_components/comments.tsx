@@ -27,7 +27,7 @@ const Comments = ({ postId, user }: Props) => {
             skip: (page - 1) * DEFAULT_PAGE_SIZE,
         }),
     });
-
+ 
     const totalPages = Math.ceil((data?.count ?? 0) / DEFAULT_PAGE_SIZE);
     
     return (

@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const GET_POSTS = gql`
-    query  post($skip: Float, $take: Float) {
-        post(skip: $skip, take: $take) {
+    query  posts($skip: Float, $take: Float) {
+        posts(skip: $skip, take: $take) {
             id
             title
             content
@@ -43,8 +43,8 @@ export const CREATE_USER_MUTATION = gql`
 `
 
 export const SIGN_IN_MUTATION = gql`
-    mutation sigIn($input: SignInInput!) {
-        sigIn(signInInput: $input) {
+    mutation signIn($input: SignInInput!) {
+        signIn(signInInput: $input) {
             id
             name
             avatar
@@ -54,7 +54,7 @@ export const SIGN_IN_MUTATION = gql`
 `
 
 export const GET_POST_COMMENTS = gql`
-    query getPostComments($postId: Int!, $take: Float, $skip: Float) {
+    query getPostComments($postId: Int!, $take: Int, $skip: Int) {
         getPostComments(postId: $postId, take: $take, skip: $skip) {
             id
             content
@@ -64,7 +64,7 @@ export const GET_POST_COMMENTS = gql`
                 avatar
             }
         }
-        postCommentsCount(postId: $postId)
+        postCommentCount(postId: $postId)
     }
 `
 
@@ -101,7 +101,7 @@ export const UNLIKE_POST = gql`
 `
 
 export const GET_USER_POSTS = gql`
-    query getUserPosts($skip: Float, $take: Float) {
+    query getUserPosts($skip: Int, $take: Int) {
         getUserPosts(skip: $skip, take: $take) {
             id
             title
@@ -116,7 +116,7 @@ export const GET_USER_POSTS = gql`
             }
         }
 
-        userPostsCount
+        userPostCount
     }
 `
 

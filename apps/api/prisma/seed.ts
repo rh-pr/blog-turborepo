@@ -1,61 +1,37 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import 'dotenv/config'; 
-import { faker } from '@faker-js/faker';
+import { fa, faker } from '@faker-js/faker';
 import { PrismaClient } from '@prisma/client';
-import { randomUUID } from 'node:crypto';
+import { hash } from 'argon2';
 
 const prisma = new PrismaClient();
 
 function generateSlug(title: string): string {
-  const base = title
+  return title
     .toLowerCase()
     .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]+/g, '');
-
-  return `${base}-${randomUUID().slice(0, 8)}`;
+    .replace(/ /g, '-') // Replace spaces with hyphens
+    .replace(/[^\w-]+/g, ''); // Remove all non-word characters
 }
 
-type User = {
-  name: string;
-  email: string;
-  bio: string | null;
-  avatar: string | null;
-  password: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-  id: number;
-};
-
 async function main() {
-  const userIds: number[] = [];
-  const usersData: User[] = [];
-  
+  const defaultPassword = await hash('123');
+  const users = Array.from({ length: 10 }).map(() => ({
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
+    bio: faker.lorem.sentence(),
+    avatar: faker.image.avatar(),
+    password: defaultPassword,
+  }));
 
-  for (let i = 0; i < 10; i++) {
-    const user = await prisma.user.create({
-      data: {
-        name: faker.person.fullName(),
-        email: faker.internet.email(),
-        bio: faker.lorem.sentence(),
-        avatar: faker.image.avatar(),
-      },
-    });
-    usersData.push(user);
-  }
-
-  usersData.forEach((user) => {
-    userIds.push(user.id);
+  await prisma.user.createMany({
+    data: users,
   });
 
-  const posts = Array.from({ length: 40 }).map(() => ({
+  const posts = Array.from({ length: 400 }).map(() => ({
     title: faker.lorem.sentence(),
     slug: generateSlug(faker.lorem.sentence()),
     content: faker.lorem.paragraphs(3),
-    thumbnail: faker.image.urlLoremFlickr(),
-    authorId: faker.helpers.arrayElement(userIds),
+    thumbnail: faker.image.urlLoremFlickr({ height: 240, width: 320 }),
+    authorId: faker.number.int({ min: 1, max: 10 }),
     published: true,
   }));
 
@@ -69,7 +45,7 @@ async function main() {
               createMany: {
                 data: Array.from({ length: 20 }).map(() => ({
                   content: faker.lorem.sentence(),
-                  authorId: faker.helpers.arrayElement(userIds),
+                  authorId: faker.number.int({ min: 1, max: 10 }),
                 })),
               },
             },
@@ -78,7 +54,7 @@ async function main() {
     ),
   );
 
-  console.log('Sending Completed!');
+  console.log('Seeding Completed!');
 }
 
 main()
@@ -88,6 +64,6 @@ main()
   })
   .catch((e) => {
     prisma.$disconnect();
-    console.log(e);
+    console.error(e);
     process.exit(1);
   });

@@ -15,7 +15,7 @@ export default async function PostPage ({ params }:Props) {
     const postId = (await params).id;
     const post = await fetchPostById(+postId);
     const session = await getSession();
-
+    
     return <main className="container mx-auto px-4 py-8 mt-16  ">
         <h1 className="text-4xl font-bold mb-4 text-slate-700 text-center">{post.title}</h1>
         <p className="text-slate-500 text-sm mb-4 text-center">

@@ -6,14 +6,15 @@ import { Post } from "../types/modelTypes";
 import { PostFormState } from "../types/formState";
 import { PostFormShema } from "../zodSchemas/postFormSchema";
 import { uploadThumbnail } from "../upload";
+import { redirect } from "next/navigation";
 
 
 export const fetchPosts = async ({page, pageSize}:{page: number, pageSize: number}) => {
     const { skip, take } = transformationSkip({ page, pageSize });
     const data = await fetchGraphQL(print(GET_POSTS), { skip, take });
- 
+
     return {
-        posts: data.post,
+        posts: data.posts,
         totalPosts: data.postCount,
     };
 }
@@ -59,9 +60,12 @@ export const saveNewPost = async (
         thumbnailUrl = await uploadThumbnail(validatedFields.data.thumbnail);
     }
 
+    const {id, ...valiedatedData} = validatedFields.data;
+
     const data = await authFetchGraphQL(print(CREATE_POST_MUTATION), {
         input: {
-            ...validatedFields.data,
+            // ...validatedFields.data,
+            ... valiedatedData,
             thumbnail: thumbnailUrl,
         }
     })
@@ -92,13 +96,12 @@ export const updatePost = async (
 
     const { thumbnail, ...inputs } = validatedFields.data;
     let thumbnailUrl = '';
+    
 
     if (thumbnail) {
         thumbnailUrl = await uploadThumbnail(thumbnail);
     }
 
-    console.log('inputs ', inputs);
-    
 
     const data = await authFetchGraphQL(print(UPDATE_POST_MUTATION), {
         input: {
@@ -107,12 +110,12 @@ export const updatePost = async (
         }
     });
 
-      console.log('data: ', data);
-
-    if (data) return {
+    if (data) {
+        redirect("/user/posts");
+        return {
         messaage: "Success! New Post Saved!",
         ok: true,
-    }
+    }}
 
     return {
         messaage: "Opps, Something Went Wrong",

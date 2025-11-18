@@ -64,11 +64,11 @@ export async function signin(state: SignUpFormState, formData: FormData): Promis
 
    await createSession({
     user: {
-        id: data.sigIn.id,
-        name: data.sigIn.name,
-        avatar: data.sigIn.avatar
+        id: data.signIn.id,
+        name: data.signIn.name,
+        avatar: data.signIn.avatar
     },
-    accessToken: data.sigIn.accessToken
+    accessToken: data.signIn.accessToken
    });
 
     revalidatePath("/")

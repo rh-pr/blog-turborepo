@@ -8,6 +8,8 @@ type Props = {
 }
 
 const PostListItem = ({post}: Props) => {
+console.log('im', post.thumbnail);
+
   return (
     <div className="grid grid-cols-8 m-3 rounded-md overflow-hidden border shadow hover:scale-[101%] bg-white">
         <div className="relative w-48 h-32 m-3">

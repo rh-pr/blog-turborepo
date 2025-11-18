@@ -8,9 +8,12 @@ export async function getPostComments(
     { postId, take, skip}:
     { postId: number; take?: number; skip?: number }) {
         const data = await fetchGraphQL(print(GET_POST_COMMENTS), { postId, take, skip });
+       
+        console.log('data', data);
+        
         return {
             comments: data.getPostComments,
-            count: data.postCommentsCount,
+            count: data.postCommentCount,
         }
 }
 
