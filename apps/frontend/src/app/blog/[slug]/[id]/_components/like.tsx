@@ -1,6 +1,6 @@
 "use client";
 
-import { getLikesCount, getPostLikeData, getUseLikedStatus } from "@/lib/actions/likeAction";
+import { getLikesCount, getUseLikedStatus } from "@/lib/actions/likeAction";
 import { HeartIcon as LikeHeart } from "@heroicons/react/16/solid";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -12,10 +12,6 @@ type Props = {
 }
 
 const Like = ({postId}: Props) => {
-    // const { data, refetch } = useQuery({
-    //     queryKey: ['GET_POST_LIKE_DATA', postId],
-    //     queryFn: async () => await getPostLikeData( postId ),
-    // });
 
   const { data: userLiked, refetch: userLikedRefetch } = useQuery({
     queryKey: ['GET_USER_LIKED_STATUS', postId],
