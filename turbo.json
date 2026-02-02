@@ -2,7 +2,8 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "env": ["SESSION_KEY", "BACKEND_URL"]
     },
     "lint": {},
     "dev": {
