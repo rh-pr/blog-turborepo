@@ -1,0 +1,74 @@
+
+> frontend@0.1.0 build
+> next build --turbopack
+
+   ▲ Next.js 15.5.4 (Turbopack)
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Finished writing to disk in 50ms
+ ✓ Compiled successfully in 3.9s
+   Linting and checking validity of types ...
+
+./src/app/blog/[slug]/[id]/_components/addComment.tsx
+39:8  Warning: React Hook useEffect has a missing dependency: 'props'. Either include it or remove the dependency array. However, 'props' will change when *any* prop changes, so the preferred fix is to destructure the 'props' object outside of the useEffect call and refer to those specific props inside useEffect.  react-hooks/exhaustive-deps
+
+./src/app/blog/[slug]/[id]/_components/SantizedContent.tsx
+4:6  Warning: 'Props' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/page.tsx
+15:9  Warning: 'session' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/user/posts/@modal/(.)[id]/delete/page.tsx
+15:8  Warning: 'Link' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/user/posts/layout.tsx
+1:10  Warning: 'Children' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/user/posts/[id]/delete/page.tsx
+19:31  Warning: 'formData' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/pagination.tsx
+13:67  Warning: 'className' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/actions/postAction.ts
+63:12  Warning: 'id' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/11) ...
+   Generating static pages (2/11) 
+   Generating static pages (5/11) 
+   Generating static pages (8/11) 
+ ✓ Generating static pages (11/11)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                         Size  First Load JS
+┌ ƒ /                            5.79 kB         180 kB
+├ ƒ /_not-found                      0 B         174 kB
+├ ƒ /api/auth/google/callback        0 B            0 B
+├ ƒ /api/auth/signout                0 B            0 B
+├ ƒ /auth/signin                 3.18 kB         178 kB
+├ ƒ /auth/signup                 3.21 kB         178 kB
+├ ƒ /blog/[slug]/[id]              96 kB         270 kB
+├ ƒ /user/create-post            10.5 kB         303 kB
+├ ƒ /user/posts                   8.4 kB         183 kB
+├ ƒ /user/posts/(.)[id]/delete   5.43 kB         298 kB
+├ ƒ /user/posts/[id]/delete      1.96 kB         176 kB
+└ ƒ /user/posts/[id]/update      10.6 kB         303 kB
++ First Load JS shared by all     185 kB
+  ├ chunks/150316a471952cee.js   59.2 kB
+  ├ chunks/21c29ec1c1c488cf.js   10.2 kB
+  ├ chunks/6475bca9f0f0baf0.js   10.3 kB
+  ├ chunks/6e96f84838a0501c.js   11.8 kB
+  ├ chunks/9b3da3ee541b1282.js   15.9 kB
+  ├ chunks/c5948610db66a9fe.js   17.2 kB
+  ├ chunks/66a25bd6bd64ae20.css  10.1 kB
+  └ other shared chunks (total)  49.9 kB
+
+
+ƒ Middleware                     48.9 kB
+
+ƒ  (Dynamic)  server-rendered on demand
+

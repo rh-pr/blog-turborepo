@@ -4,8 +4,8 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { verify } from 'argon2';
 import { JwtService } from '@nestjs/jwt';
 import { AuthJwtPayload } from './types/auth-jwtPayload';
-import { User } from '@prisma/client';
 import { CreateUserInput } from 'src/user/dto/create-user.input';
+import { User } from 'src/user/entities/user.entity';
 
 @Injectable()
 export class AuthService {
